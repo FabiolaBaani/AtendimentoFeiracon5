@@ -265,36 +265,11 @@ client.on('message', async msg => {
   if (msg.from.includes("@g.us")) return null;
 
   if (msg.body !== null && msg.body === "1") {
- delay(2000).then(async function() {
-
-const stickers = MessageMedia.fromFilePath('./images/sticker.png');
-client.sendMessage(stickers, { sendMediaAsSticker: true })
-
-});
-	msg.reply("Clique no link abaixo e efetue sua inscrição!");
-
-	delay(2000).then(async function() {
-	const media = MessageMedia.fromFilePath('./images/cardinsc.png');
-	client.sendMessage(msg.from, media, {caption: 'link'})
-		});
-
+ 	msg.reply("Será incrível ter você com a gente!\nAgora é só clicar no link da inscrição e preencher seu cadastro!\n\nSeja bem vindo(a) a FEIRACON EXPO 2023 🏠🏬");
  	}
 	
    else if (msg.body !== null && msg.body === "2") {
-
-delay(2000).then(async function() {
-
-const stickers = MessageMedia.fromFilePath('./images/cardexpo.png');
-client.sendMessage(stickers, { sendMediaAsSticker: true })
-
-});
-	msg.reply("Clique no link abaixo e efetue sua inscrição!");
-
-	delay(2000).then(async function() {
-	const media = MessageMedia.fromFilePath('./images/card');
-	client.sendMessage(msg.from, media, {caption: 'link'})
-		});
-
+msg.reply("Será incrível ter vocês como expositores!\nAcesse o link para se cadastrar que alguém de nossa equipe entrará em contato com você!\n\nSeja bem vindo(a) a FEIRACON EXPO 2023 🏠🏬");
  	}
 	  
  else if (msg.body !== null && msg.body === "3") {
