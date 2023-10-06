@@ -309,91 +309,17 @@ const contactCard = await client.getContactById('556592789898@c.us');
    	        
  } 
    
-  else if (msg.body !== null && msg.body === "12") {
-  msg.reply("Opção inválida! 📵\nEscolha um número do menu principal por favor, ou digite *9* para falar com um atendente."); 
-  }
-  
- else if (msg.body !== null && msg.body === "13") {
-  msg.reply("Opção inválida! 📵\nEscolha um número do menu principal por favor, ou digite *9* para falar com um atendente."); 
-  }
-  
- else if (msg.body !== null && msg.body === "14") {
-  msg.reply("Opção inválida! 📵\nEscolha um número do menu principal por favor, ou digite *9* para falar com um atendente."); 
-  }
-
-  else if (msg.body !== null && msg.body === "15") {
-  msg.reply("Opção inválida! 📵\nEscolha um número do menu principal por favor, ou digite *9* para falar com um atendente."); 
-  }
-	  
-else if (msg.body !== null && msg.body === "16"){
-  msg.reply("Opção inválida! 📵\nEscolha um número do menu principal por favor, ou digite *9* para falar com um atendente."); 
-  }
-    
-  else if (msg.body !== null && msg.body === "17") {
-  msg.reply("Opção inválida! 📵\nEscolha um número do menu principal por favor, ou digite *9* para falar com um atendente."); 
-  }
-  
-  else if (msg.body !== null && msg.body === "18") {
-  msg.reply("Opção inválida! 📵\nEscolha um número do menu principal por favor, ou digite *9* para falar com um atendente."); 
-  }
-  
-  else if (msg.body !== null && msg.body === "19") {
-  msg.reply("Opção inválida! 📵\nEscolha um número do menu principal por favor, ou digite *9* para falar com um atendente."); 
-  }
-  
-  else if (msg.body !== null && msg.body === "20") {
-  msg.reply("Opção inválida! 📵\nEscolha um número do menu principal por favor, ou digite *9* para falar com um atendente."); 
-  }
-  
-  else if (msg.body !== null && msg.body === "21") {
-  msg.reply("Opção inválida! 📵\nEscolha um número do menu principal por favor, ou digite *9* para falar com um atendente."); 
-  }
-  
-  else if (msg.body !== null && msg.body === "22") {
-  msg.reply("Opção inválida! 📵\nEscolha um número do menu principal por favor, ou digite *9* para falar com um atendente."); 
-  }
-
-  else if (msg.body !== null && msg.body === "23") {
-  msg.reply("Opção inválida! 📵\nEscolha um número do menu principal por favor, ou digite *9* para falar com um atendente."); 
-  }
-
-  else if (msg.body === '!mediainfo' && msg.hasMedia) {
-  msg.reply("Desculpe, não entendo mensagens de voz por enquanto 😔\nEscolha um número do menu principal por favor, ou digite *9* para falar com um atendente."); 
-  }
-
- else if (msg.body !== null && msg.body === "N") {
-   const chat = await msg.getChat();
-   msg.reply("Ok, não vamos mais te enviar mensagens por este atendimento virtual. Desculpe 😔"); 
-  
-        // mute the chat for 60 seconds
-        //async muteChat(chatId, unmuteDate) {
-  }
-
- else if (msg.body !== null && msg.body === "n") {
+  else if (msg.body !== null && msg.body === "4") {
   msg.reply("Ok, não vamos mais te enviar mensagens por este atendimento virtual. Desculpe 😔"); 
   }
 
    else if (msg.body !== null || msg.body === "0" || msg.type === 'ptt') {
 
-   	delay(12000).then(async function() {
+   	delay(1000).then(async function() {
 
- 	msg.reply("Olá *" + nomeContato + "*, você está agora conversando com o que há de mais moderno em atendimento digital para WhatsApp.\nPor aqui suas dúvidas serão todas respondidas, mas caso não seja suficiente, pode falar diretamente com alguém.\nO contato segue no final da conversa 😉");
-	
-	const saudacao = ("🤖 A *robotização* veio pra ficar, é inegável!\n\n✅ E você não precisa estar *disponível o tempo todo* para seus clientes, mas sua empresa sim!\n\n👩🏽‍💻 Instale uma *secretária virtual* e nunca mais deixe alguém esperando para ser atendido!\n\n🪙 Com *pouco investimento* você pode oferecer atendimento profissional *24 horas*, o ano todo!\n\n🎯 Direcione o contato dos seus *anúncios patrocinados* para o robô também e aumente sua carteira de clientes!\n\n*Quer saber mais?* Vou te mostrar como funciona ⬇️");
-	
-	const saudacao1 = ("Este é o nosso atendimento digital, você pode resolver suas dúvidas e ter um exemplo do que pode oferecer aos seus clientes.\n\nPara começar digite o número de uma das opções abaixo:");
-	
-	client.sendMessage(msg.from, saudacao);	
-	client.sendMessage(msg.from, saudacao1);
-
+ 	msg.reply("Opção inválida! Por favor digite uma das opções do menu:\n\n1️⃣ Quero fazer minha inscrição\r\n\r\n2️⃣ Quero ser expositor\r\n\r\n3️⃣ Quero falar com com a empresa \r\n\r\n4️⃣ Não me enviem mais mensagens");
 		});
       
-	delay(23000).then(async function() {
-
-const saudacao2 = ("1️⃣ Quero saber como funciona esse robô de WhatsApp \r\n\r\n2️⃣ Quais equipamentos preciso ter para iniciar este serviço?\r\n\r\n3️⃣ Vocês fazem disparos de WhatsApp? \r\n\r\n4️⃣ Funciona no Brasil todo?\r\n\r\n5️⃣ Consigo enviar anexos como fotos, textos, áudios e vídeos?\r\n\r\n6️⃣ Preciso estar com meu celular conectado para que funcione? \r\n\r\n7️⃣ Preciso de um número exclusivo para o atendimento? \r\n\r\n8️⃣ Quanto custa este serviço?\r\n\r\n9️⃣ Minha dúvida não está aqui, quero falar com alguém da Politeia\r\n\r\nPara mais detalhes, visite nosso site:\nhttps://www.politeiaid.com.br/\r\n\r\nCaso não queira mais receber mensagens deste atendimento virtual, por favor digite *N*");
-
-	client.sendMessage(msg.from, saudacao2);
-		});
 	}
 });
 
