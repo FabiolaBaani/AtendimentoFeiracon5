@@ -274,7 +274,7 @@ client.sendMessage(stickers, { sendMediaAsSticker: true })
 	msg.reply("Clique no link abaixo e efetue sua inscrição!");
 
 	delay(2000).then(async function() {
-	const media = MessageMedia.fromFilePath('./images/cardinsc');
+	const media = MessageMedia.fromFilePath('./images/cardinsc.png');
 	client.sendMessage(msg.from, media, {caption: 'link'})
 		});
 
@@ -284,7 +284,7 @@ client.sendMessage(stickers, { sendMediaAsSticker: true })
 
 delay(2000).then(async function() {
 
-const stickers = MessageMedia.fromFilePath('./images/cardexpo');
+const stickers = MessageMedia.fromFilePath('./images/cardexpo.png');
 client.sendMessage(stickers, { sendMediaAsSticker: true })
 
 });
