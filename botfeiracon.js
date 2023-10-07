@@ -8,7 +8,7 @@ const http = require('http');
 const fileUpload = require('express-fileupload');
 const axios = require('axios');
 const mime = require('mime-types');
-const port = process.env.PORT || 8005;
+const port = process.env.PORT || 8012;
 const app = express();
 const server = http.createServer(app);
 const io = socketIO(server);
@@ -52,42 +52,42 @@ const client = new Client({
 client.initialize();
 
 io.on('connection', function(socket) {
-  socket.emit('message', '© BOT-POLITEIA - Iniciado');
+  socket.emit('message', '© BOT-Feiracon - Iniciado');
   socket.emit('qr', './icon.svg');
 
 client.on('qr', (qr) => {
     console.log('QR RECEIVED', qr);
     qrcode.toDataURL(qr, (err, url) => {
       socket.emit('qr', url);
-      socket.emit('message', '© BOT-POLITEIA QRCode recebido, aponte a câmera  seu celular!');
+      socket.emit('message', '© BOT-Feiracon QRCode recebido, aponte a câmera  seu celular!');
     });
 });
 
 client.on('ready', () => {
-    socket.emit('ready', '© BOT-POLITEIA Dispositivo pronto!');
-    socket.emit('message', '© BOT-POLITEIA Dispositivo pronto!');
+    socket.emit('ready', '© BOT-Feiracon Dispositivo pronto!');
+    socket.emit('message', '© BOT-Feiracon Dispositivo pronto!');
     socket.emit('qr', './check.svg')	
-    console.log('© BOT-POLITEIA Dispositivo pronto');
+    console.log('© BOT-Feiracon Dispositivo pronto');
 });
 
 client.on('authenticated', () => {
-    socket.emit('authenticated', '© BOT-POLITEIA Autenticado!');
-    socket.emit('message', '© BOT-POLITEIA Autenticado!');
-    console.log('© BOT-POLITEIA Autenticado');
+    socket.emit('authenticated', '© BOT-Feiracon Autenticado!');
+    socket.emit('message', '© BOT-Feiracon Autenticado!');
+    console.log('© BOT-Feiracon Autenticado');
 });
 
 client.on('auth_failure', function() {
-    socket.emit('message', '© BOT-POLITEIA Falha na autenticação, reiniciando...');
-    console.error('© BOT-POLITEIA Falha na autenticação');
+    socket.emit('message', '© BOT-Feiracon Falha na autenticação, reiniciando...');
+    console.error('© BOT-Feiracon Falha na autenticação');
 });
 
 client.on('change_state', state => {
-  console.log('© BOT-POLITEIA Status de conexão: ', state );
+  console.log('© BOT-Feiracon Status de conexão: ', state );
 });
 
 client.on('disconnected', (reason) => {
-  socket.emit('message', '© BOT-POLITEIA Cliente desconectado!');
-  console.log('© BOT-POLITEIA Cliente desconectado', reason);
+  socket.emit('message', '© BOT-Feiracon Cliente desconectado!');
+  console.log('© BOT-Feiracon Cliente desconectado', reason);
   client.initialize();
 });
 });
@@ -121,13 +121,13 @@ app.post('/politeia-message', [
     client.sendMessage(numberZDG, message).then(response => {
     res.status(200).json({
       status: true,
-      message: 'BOT-POLITEIA Mensagem enviada',
+      message: 'BOT-Feiracon Mensagem enviada',
       response: response
     });
     }).catch(err => {
     res.status(500).json({
       status: false,
-      message: 'BOT-POLITEIA Mensagem não enviada',
+      message: 'BOT-Feiracon Mensagem não enviada',
       response: err.text
     });
     });
@@ -137,13 +137,13 @@ app.post('/politeia-message', [
     client.sendMessage(numberZDG, message).then(response => {
     res.status(200).json({
       status: true,
-      message: 'BOT-POLITEIA Mensagem enviada',
+      message: 'BOT-Feiracon Mensagem enviada',
       response: response
     });
     }).catch(err => {
     res.status(500).json({
       status: false,
-      message: 'BOT-POLITEIA Mensagem não enviada',
+      message: 'BOT-Feiracon Mensagem não enviada',
       response: err.text
     });
     });
@@ -153,13 +153,13 @@ app.post('/politeia-message', [
     client.sendMessage(numberZDG, message).then(response => {
     res.status(200).json({
       status: true,
-      message: 'BOT-POLITEIA Mensagem enviada',
+      message: 'BOT-Feiracon Mensagem enviada',
       response: response
     });
     }).catch(err => {
     res.status(500).json({
       status: false,
-      message: 'BOT-POLITEIA Mensagem não enviada',
+      message: 'BOT-Feiracon Mensagem não enviada',
       response: err.text
     });
     });
@@ -206,13 +206,13 @@ app.post('/politeia-media', [
     client.sendMessage(numberZDG, media).then(response => {
     res.status(200).json({
       status: true,
-      message: 'BOT-POLITEIA Imagem enviada',
+      message: 'BOT-Feiracon Imagem enviada',
       response: response
     });
     }).catch(err => {
     res.status(500).json({
       status: false,
-      message: 'BOT-POLITEIA Imagem não enviada',
+      message: 'BOT-Feiracon Imagem não enviada',
       response: err.text
     });
     });
@@ -222,13 +222,13 @@ app.post('/politeia-media', [
     client.sendMessage(numberZDG, media).then(response => {
     res.status(200).json({
       status: true,
-      message: 'BOT-POLITEIA Imagem enviada',
+      message: 'BOT-Feiracon Imagem enviada',
       response: response
     });
     }).catch(err => {
     res.status(500).json({
       status: false,
-      message: 'BOT-POLITEIA Imagem não enviada',
+      message: 'BOT-Feiracon Imagem não enviada',
       response: err.text
     });
     });
@@ -238,13 +238,13 @@ app.post('/politeia-media', [
     client.sendMessage(numberZDG, media).then(response => {
     res.status(200).json({
       status: true,
-      message: 'BOT-POLITEIA Imagem enviada',
+      message: 'BOT-Feiracon Imagem enviada',
       response: response
     });
     }).catch(err => {
     res.status(500).json({
       status: false,
-      message: 'BOT-POLITEIA Imagem não enviada',
+      message: 'BOT-Feiracon Imagem não enviada',
       response: err.text
     });
     });
