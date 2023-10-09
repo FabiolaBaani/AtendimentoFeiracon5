@@ -4,8 +4,8 @@
   "description": "bot-zdg: based on Whatsapp API",
   "main": "app.js",
   "scripts": {
-    "start": "node botfeiracon4.js",
-    "start:dev": "nodemon botfeiracon4.js",
+    "start": "node botfeiracon5.js",
+    "start:dev": "nodemon botfeiracon5.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
