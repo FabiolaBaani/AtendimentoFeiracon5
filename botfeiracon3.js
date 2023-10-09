@@ -8,7 +8,7 @@ const http = require('http');
 const fileUpload = require('express-fileupload');
 const axios = require('axios');
 const mime = require('mime-types');
-const port = process.env.PORT || 8014;
+const port = process.env.PORT || 8015;
 const app = express();
 const server = http.createServer(app);
 const io = socketIO(server);
@@ -264,22 +264,26 @@ client.on('message', async msg => {
 	
   if (msg.from.includes("@g.us")) return null;
 
-  if (msg.body !== null && msg.body === "1") {
- 	msg.reply("Será incrível ter você com a gente!\nAgora é só clicar no link da inscrição e preencher seu cadastro!\n\nSeja bem vindo(a) a FEIRACON EXPO 2023 🏠🏬");
+if (msg.body !== null && msg.body === "1") {
+ 	msg.reply("Será incrível ter você com a gente!\nAgora é só clicar no link da inscrição abaixo e preencher seu cadastro!\n\nhttps://abre.ai/feiracon\n\nSeja bem vindo(a) a *FEIRACON EXPO* 2023 🏠🏬");
  	}
 	
    else if (msg.body !== null && msg.body === "2") {
-msg.reply("Será incrível ter vocês como expositores!\nAcesse o link para se cadastrar que alguém de nossa equipe entrará em contato com você!\n\nSeja bem vindo(a) a FEIRACON EXPO 2023 🏠🏬");
+msg.reply("Será incrível ter vocês como expositores!\nAcesse o link para se cadastrar que alguém de nossa equipe entrará em contato com você!\n\nhttps://feiracon.com/index.php/seja-um-expositor\n\nSeja bem vindo(a) a *FEIRACON EXPO* 2023 🏠🏬");
  	}
 	  
  else if (msg.body !== null && msg.body === "3") {
 
 	msg.reply("Fale agora mesmo com uma de nossas atendentes:");
 
-delay(4000).then(async function() {
+delay(3000).then(async function() {
 
 const contactCard = await client.getContactById('556592789898@c.us');
+const adeus = ("Nos vemos na *FEIRACON EXPO* 2023, até logo!");
+
 	    client.sendMessage(msg.from, contactCard)
+	   client.sendMessage(msg.from, adeus)
+
      		});
    	        
  } 
